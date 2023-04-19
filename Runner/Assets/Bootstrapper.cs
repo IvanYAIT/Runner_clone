@@ -1,17 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bootstrapper : MonoBehaviour
 {
     [SerializeField] private List<GameObject> levelParts;
-    [SerializeField] private LevelGenerator levelGenerator;
+    [SerializeField] private int amountOfStartLevelParts;
+    [SerializeField] private GameObject startPoint;
 
+    private LevelGenerator levelGenerator;
     private LevelPartPool levelPartPool;
 
     void Start()
     {
         levelPartPool = new LevelPartPool(levelParts);
-        levelGenerator.Construct(levelPartPool);
+        levelPartPool.InitPool(amountOfStartLevelParts);
+        levelGenerator = new LevelGenerator(startPoint, amountOfStartLevelParts, levelPartPool);
     }
 }
