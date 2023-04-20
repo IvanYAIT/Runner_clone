@@ -1,34 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelGenerator
+public class SmartLevelGenerator
 {
     private const float MOVE_DISTANCE = 15;
     private GameObject _startPoint;
     private int _amountOfStartLevelParts;
     private LevelPartPool _pool;
+    private List<LevelPartData> _levelPartsDatas;
+    private RandomizeService rndService;
 
-    public LevelGenerator(GameObject startPoint, int amountOfStartLevelParts, LevelPartPool pool)
+    public SmartLevelGenerator(GameObject startPoint, int amountOfStartLevelParts, LevelPartPool pool, List<LevelPartData> levelPartsDatas, ServiceLocator serviceLocator)
     {
         _startPoint = startPoint;
         _amountOfStartLevelParts = amountOfStartLevelParts;
         _pool = pool;
-        InitLevel();
+        _levelPartsDatas = levelPartsDatas;
+        serviceLocator.GetService(out rndService);
+        //InitLevel();
     }
 
     public void Generate()
     {
-        foreach (LevelPart item in _pool.LevelParts)
-        {
-            if (!item.gameObject.activeSelf)
-            {
-                CreateLevelPart(item);
-                break;
-            }
-        }
+
     }
 
     private void InitLevel()
     {
+        LevelPart firstPart = _pool.Get(Random.Range(0, _pool.LevelParts.Count));
+        CreateLevelPart(firstPart);
+
         int rndNum;
         for (int i = 0; i < _amountOfStartLevelParts; i++)
         {
@@ -39,10 +41,11 @@ public class LevelGenerator
             }
             else
             {
-                CreateLevelPart(_pool.Get(rndNum));
+                CreateLevelPart(_pool.Get(rndService.Randomize(firstPart.Index, _levelPartsDatas)));
             }
         }
     }
+
 
     private void CreateLevelPart(LevelPart item)
     {

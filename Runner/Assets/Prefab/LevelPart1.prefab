@@ -1858,6 +1858,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4187954616137857047}
+  - component: {fileID: 7475251070416432873}
+  - component: {fileID: 3065231679781463897}
   m_Layer: 0
   m_Name: LevelPart1
   m_TagString: Untagged
@@ -1894,6 +1896,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7475251070416432873
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4187954616137857046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.5, y: 5.5, z: 0.2}
+  m_Center: {x: 6, y: 2, z: 4.5}
+--- !u!114 &3065231679781463897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4187954616137857046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d7260b686d2a842827e2f66c94743b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4187954616137857046}
+  index: 1
 --- !u!1 &4187954616408629952
 GameObject:
   m_ObjectHideFlags: 0

@@ -1175,6 +1175,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3966080758069931990}
+  - component: {fileID: 3939459668965108984}
+  - component: {fileID: 7035341344947891695}
   m_Layer: 0
   m_Name: LevelPart5
   m_TagString: Untagged
@@ -1209,6 +1211,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3939459668965108984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966080758069931991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.5, y: 5.5, z: 0.2}
+  m_Center: {x: 6, y: 2, z: 4.5}
+--- !u!114 &7035341344947891695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966080758069931991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d7260b686d2a842827e2f66c94743b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3966080758069931991}
+  index: 5
 --- !u!1 &3966080758200150024
 GameObject:
   m_ObjectHideFlags: 0

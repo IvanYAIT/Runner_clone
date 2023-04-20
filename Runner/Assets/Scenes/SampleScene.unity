@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -167,14 +167,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29912a67f5c62a4596fc7b7c923e75a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelParts:
-  - {fileID: 4187954616137857046, guid: d1029eea0f3c03346ada0d96933cd0c8, type: 3}
-  - {fileID: 6551121721366414626, guid: eb1efb9fad86e0f4bab23cdb177601e0, type: 3}
-  - {fileID: 6822946858982860645, guid: b2fde99d515413748be1af809a70e141, type: 3}
-  - {fileID: 2084025661845287771, guid: ec1853e2b0aa54a4fa6627e9c7b8d010, type: 3}
-  - {fileID: 3966080758069931991, guid: 9f6230835b3b7894ebadd86f5ac686e4, type: 3}
-  amountOfStartLevelParts: 10
+  levelPartsDatas:
+  - {fileID: 11400000, guid: a21267f0dbccb9847ac43f257c22fc73, type: 2}
+  - {fileID: 11400000, guid: 4ce9decd41349e0499680ed79ed7d1f7, type: 2}
+  - {fileID: 11400000, guid: 83c7fb9e46e64e7419c7149fe5e1b199, type: 2}
+  - {fileID: 11400000, guid: d8cc2a563499c1c45a164654e28eb661, type: 2}
+  - {fileID: 11400000, guid: 000f188713cfcf64695679342344d730, type: 2}
+  amountOfStartLevelParts: 4
   startPoint: {fileID: 2045882671}
+  smartGenerator: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +282,8 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -366,6 +369,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450b7b6c3b364b245935868c748bc220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &963194230
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &963194231
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2045882671
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,38 +3,58 @@ using UnityEngine;
 
 public class LevelPartPool
 {
-    public List<GameObject> LevelParts { get; private set; }
+    public List<LevelPart> LevelParts { get; private set; }
 
-    private List<GameObject> _levelPartPrefabs;
+    private List<LevelPartData> _levelPartsDatas;
 
-    public LevelPartPool(List<GameObject> levelparts)
+    public LevelPartPool(List<LevelPartData> levelpartsDatas)
     {
-        _levelPartPrefabs = levelparts;
-        LevelParts = new List<GameObject>();
+        _levelPartsDatas = levelpartsDatas;
+        LevelParts = new List<LevelPart>();
     }
 
     public void InitPool(int poolSize)
     {
-        for (int i = 0; i < _levelPartPrefabs.Count; i++)
+        if(poolSize < _levelPartsDatas.Count)
         {
-            GameObject obj = Object.Instantiate(_levelPartPrefabs[i]);
-            LevelParts.Add(obj);
-        }
-
-        if (poolSize > LevelParts.Count)
-            for (int i = 0; i < poolSize - LevelParts.Count+2; i++)
+            for (int i = 0; i < poolSize; i++)
             {
-                Add();
+                GameObject obj = Object.Instantiate(_levelPartsDatas[i].Prefab);
+                LevelPart objLevelPart = obj.GetComponent<LevelPart>();
+                objLevelPart.SetIndex(_levelPartsDatas[i].Index);
+                LevelParts.Add(objLevelPart);
             }
+        }
+        else
+        {
+            for (int i = 0; i < _levelPartsDatas.Count; i++)
+            {
+                GameObject obj = Object.Instantiate(_levelPartsDatas[i].Prefab);
+                LevelPart objLevelPart = obj.GetComponent<LevelPart>();
+                objLevelPart.SetIndex(_levelPartsDatas[i].Index);
+                LevelParts.Add(objLevelPart);
+            }
+            if (poolSize > LevelParts.Count)
+                for (int i = 0; i < poolSize - _levelPartsDatas.Count; i++)
+                {
+                    Add();
+                }
+        }
     }
 
-    public GameObject Get(int index) => LevelParts[index];
+    public LevelPart Get(int index) => LevelParts[index];
 
-    public void Return(GameObject item) => LevelParts.Add(item);
+    public LevelPart GetLast() => LevelParts[LevelParts.Count - 1];
+
+    public void Return(LevelPart item) => LevelParts.Add(item);
 
     public void Add()
     {
-        GameObject obj = Object.Instantiate(_levelPartPrefabs[Random.Range(0, _levelPartPrefabs.Count)]);
-        LevelParts.Add(obj);
+        int rndNum = Random.Range(0, _levelPartsDatas.Count);
+        GameObject obj = Object.Instantiate(_levelPartsDatas[rndNum].Prefab);
+        LevelPart objLevelPart = obj.GetComponent<LevelPart>();
+        objLevelPart.SetIndex(_levelPartsDatas[rndNum].Index);
+        LevelParts.Add(objLevelPart);
+        LevelParts.Add(obj.GetComponent<LevelPart>());
     }
 }
