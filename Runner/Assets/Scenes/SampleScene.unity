@@ -175,7 +175,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 000f188713cfcf64695679342344d730, type: 2}
   amountOfStartLevelParts: 4
   startPoint: {fileID: 2045882671}
-  smartGenerator: 1
+  smartGenerator: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
