@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class SmartLevelGenerator
 {
@@ -9,15 +10,16 @@ public class SmartLevelGenerator
     private int _amountOfStartLevelParts;
     private LevelPartPool _pool;
     private List<LevelPartData> _levelPartsDatas;
-    private RandomizeService rndService;
+    private RandomizeService _rndService;
 
-    public SmartLevelGenerator(GameObject startPoint, int amountOfStartLevelParts, LevelPartPool pool, List<LevelPartData> levelPartsDatas, ServiceLocator serviceLocator)
+    [Inject]
+    public SmartLevelGenerator([Inject(Id = MyConstants.LEVEL_START_POINT)]GameObject startPoint, [Inject(Id = MyConstants.LEVEL_PART_POOL_SIZE)] int amountOfStartLevelParts, LevelPartPool pool, List<LevelPartData> levelPartsDatas, RandomizeService rndService)
     {
         _startPoint = startPoint;
         _amountOfStartLevelParts = amountOfStartLevelParts;
         _pool = pool;
         _levelPartsDatas = levelPartsDatas;
-        serviceLocator.GetService(out rndService);
+        _rndService = rndService;
         //InitLevel();
     }
 
@@ -41,7 +43,7 @@ public class SmartLevelGenerator
             }
             else
             {
-                CreateLevelPart(_pool.Get(rndService.Randomize(firstPart.Index, _levelPartsDatas)));
+                CreateLevelPart(_pool.Get(_rndService.Randomize(firstPart.Index, _levelPartsDatas)));
             }
         }
     }

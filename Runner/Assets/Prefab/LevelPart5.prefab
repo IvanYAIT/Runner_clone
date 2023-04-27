@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 2603842288743973295}
   - component: {fileID: 2603842288743973280}
   - component: {fileID: 2603842288743973281}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,9 +400,9 @@ GameObject:
   - component: {fileID: 2603842288869105404}
   - component: {fileID: 2603842288869105405}
   - component: {fileID: 2603842288869105406}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ObstacleHigh (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,9 +497,9 @@ GameObject:
   - component: {fileID: 2603842288996400768}
   - component: {fileID: 2603842288996400769}
   - component: {fileID: 2603842288996400770}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ObstacleHigh (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -594,9 +594,9 @@ GameObject:
   - component: {fileID: 2603842289065131514}
   - component: {fileID: 2603842289065131515}
   - component: {fileID: 2603842289065131516}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ObstacleLow (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,9 +691,9 @@ GameObject:
   - component: {fileID: 2603842289159214072}
   - component: {fileID: 2603842289159214073}
   - component: {fileID: 2603842289159214074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ObstacleLow (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,9 +788,9 @@ GameObject:
   - component: {fileID: 2603842290136864172}
   - component: {fileID: 2603842290136864173}
   - component: {fileID: 2603842290136864174}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ObstacleHigh (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -885,9 +885,9 @@ GameObject:
   - component: {fileID: 2603842290586475892}
   - component: {fileID: 2603842290586475893}
   - component: {fileID: 2603842290586475894}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ObstacleEasy (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 2603842290624540832}
   - component: {fileID: 2603842290624540833}
   - component: {fileID: 2603842290624540834}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,8 +1236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d7260b686d2a842827e2f66c94743b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3966080758069931991}
-  index: 5
 --- !u!1 &3966080758200150024
 GameObject:
   m_ObjectHideFlags: 0

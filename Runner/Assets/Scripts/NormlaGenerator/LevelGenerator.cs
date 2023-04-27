@@ -1,4 +1,5 @@
 using UnityEngine;
+using Zenject;
 
 public class LevelGenerator
 {
@@ -7,7 +8,8 @@ public class LevelGenerator
     private int _amountOfStartLevelParts;
     private LevelPartPool _pool;
 
-    public LevelGenerator(GameObject startPoint, int amountOfStartLevelParts, LevelPartPool pool)
+    [Inject]
+    public LevelGenerator([Inject(Id = MyConstants.LEVEL_START_POINT)]GameObject startPoint, [Inject(Id = MyConstants.LEVEL_PART_POOL_SIZE)] int amountOfStartLevelParts, LevelPartPool pool)
     {
         _startPoint = startPoint;
         _amountOfStartLevelParts = amountOfStartLevelParts;

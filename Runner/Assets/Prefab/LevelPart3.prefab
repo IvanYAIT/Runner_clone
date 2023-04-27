@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6355869710169423825}
   - component: {fileID: 6355869710169423830}
   - component: {fileID: 6355869710169423831}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleHigh (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,9 +109,9 @@ GameObject:
   - component: {fileID: 6355869710352838938}
   - component: {fileID: 6355869710352838939}
   - component: {fileID: 6355869710352838936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleHigh (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,9 +206,9 @@ GameObject:
   - component: {fileID: 6355869711416269673}
   - component: {fileID: 6355869711416269678}
   - component: {fileID: 6355869711416269679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleHigh (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -455,8 +455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d7260b686d2a842827e2f66c94743b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6822946858982860645}
-  index: 3
 --- !u!1 &6822946859121074362
 GameObject:
   m_ObjectHideFlags: 0

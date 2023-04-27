@@ -68,8 +68,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d7260b686d2a842827e2f66c94743b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6551121721366414626}
-  index: 2
 --- !u!1 &6551121721496765181
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,9 +662,9 @@ GameObject:
   - component: {fileID: 8053063381552618287}
   - component: {fileID: 8053063381552618256}
   - component: {fileID: 8053063381552618257}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleLow
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -761,7 +759,7 @@ GameObject:
   - component: {fileID: 8053063381590075389}
   - component: {fileID: 8053063381590075390}
   - component: {fileID: 8053063381590075391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,9 +856,9 @@ GameObject:
   - component: {fileID: 8053063381657697705}
   - component: {fileID: 8053063381657697706}
   - component: {fileID: 8053063381657697707}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleLow
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -955,9 +953,9 @@ GameObject:
   - component: {fileID: 8053063381806767218}
   - component: {fileID: 8053063381806767219}
   - component: {fileID: 8053063381806767220}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleLow
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,9 +1050,9 @@ GameObject:
   - component: {fileID: 8053063382265524703}
   - component: {fileID: 8053063382265524672}
   - component: {fileID: 8053063382265524673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleEasy (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,7 +1149,7 @@ GameObject:
   - component: {fileID: 8053063383403448514}
   - component: {fileID: 8053063383403448515}
   - component: {fileID: 8053063383403448516}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

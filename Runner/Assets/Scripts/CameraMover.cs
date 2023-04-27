@@ -39,7 +39,6 @@ public class CameraMover : MonoBehaviour
                 _left = false;
                 _middle = true;
             }
-            Debug.Log($"L {_left} M {_middle} R {_right}");
         }
     }
 
@@ -58,7 +57,6 @@ public class CameraMover : MonoBehaviour
                 _right = false;
                 _middle = true;
             }
-            Debug.Log($"L {_left} M {_middle} R {_right}");
         }
     }
 }

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 151384066}
   - component: {fileID: 151384065}
   - component: {fileID: 151384064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleHigh (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 538600203}
   - component: {fileID: 538600202}
   - component: {fileID: 538600201}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 559991542}
   - component: {fileID: 559991541}
   - component: {fileID: 559991540}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,9 +303,9 @@ GameObject:
   - component: {fileID: 652149111}
   - component: {fileID: 652149110}
   - component: {fileID: 652149109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleLow (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,9 +400,9 @@ GameObject:
   - component: {fileID: 842433099}
   - component: {fileID: 842433098}
   - component: {fileID: 842433097}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleEasy (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -596,9 +596,9 @@ GameObject:
   - component: {fileID: 975174188}
   - component: {fileID: 975174187}
   - component: {fileID: 975174186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleHigh (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -790,9 +790,9 @@ GameObject:
   - component: {fileID: 1136753266}
   - component: {fileID: 1136753265}
   - component: {fileID: 1136753264}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleEasy (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -889,9 +889,9 @@ GameObject:
   - component: {fileID: 1219846588}
   - component: {fileID: 1219846587}
   - component: {fileID: 1219846586}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleEasy (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -988,7 +988,7 @@ GameObject:
   - component: {fileID: 1310170665}
   - component: {fileID: 1310170664}
   - component: {fileID: 1310170663}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,9 +1085,9 @@ GameObject:
   - component: {fileID: 1353130855}
   - component: {fileID: 1353130854}
   - component: {fileID: 1353130853}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleLow (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 1376663451}
   - component: {fileID: 1376663450}
   - component: {fileID: 1376663449}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1376,7 +1376,7 @@ GameObject:
   - component: {fileID: 1683032913}
   - component: {fileID: 1683032912}
   - component: {fileID: 1683032911}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,9 +1473,9 @@ GameObject:
   - component: {fileID: 2090181465}
   - component: {fileID: 2090181464}
   - component: {fileID: 2090181463}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ObstacleLow (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1570,7 +1570,7 @@ GameObject:
   - component: {fileID: 2146083038}
   - component: {fileID: 2146083037}
   - component: {fileID: 2146083036}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1921,8 +1921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d7260b686d2a842827e2f66c94743b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4187954616137857046}
-  index: 1
 --- !u!1 &4187954616408629952
 GameObject:
   m_ObjectHideFlags: 0

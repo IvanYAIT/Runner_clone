@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class RandomizeService : IRandomizeService
 {
     private LevelPartPool _pool;
 
+    [Inject]
     public RandomizeService(LevelPartPool pool)
     {
         _pool = pool;
