@@ -15,7 +15,7 @@ public class Gun : MonoBehaviour
     }
 
     [Inject]
-    public void Construct(Transform firePoint, BulletPool pool)
+    public void Construct([Inject(Id = MyConstants.FIRE_POINT)]Transform firePoint, BulletPool pool)
     {
         _firePoint = firePoint;
         _pool = pool;
