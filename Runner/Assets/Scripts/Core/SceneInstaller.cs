@@ -6,18 +6,16 @@ public class SceneInstaller : MonoInstaller
 {
     [SerializeField] private int amountOfBullets;
     [SerializeField] private int amountOfStartLevelParts;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private Transform firePoint;
     [SerializeField] private List<LevelPartData> levelpartsDatas;
     [SerializeField] private GameObject levelStartPoint;
     [SerializeField] private Transform targetTransform;
-    [SerializeField] private TestFactory testFactory;
 
     public override void InstallBindings()
     {
         Container.Bind<int>().WithId(MyConstants.BULLET_AMOUNT).FromInstance(amountOfBullets).AsCached().NonLazy();
         Container.Bind<int>().WithId(MyConstants.LEVEL_PART_POOL_SIZE).FromInstance(amountOfStartLevelParts).AsCached().NonLazy();
-        Container.Bind<GameObject>().WithId(MyConstants.BULLET_PREFAB).FromInstance(bulletPrefab).AsCached().NonLazy();
         Container.Bind<GameObject>().WithId(MyConstants.LEVEL_START_POINT).FromInstance(levelStartPoint).AsCached().NonLazy();
 
         Container.Bind<Transform>().WithId(MyConstants.TARGET_TRANSFORM).FromInstance(targetTransform).AsCached().NonLazy();
@@ -29,9 +27,6 @@ public class SceneInstaller : MonoInstaller
         Container.Bind<BulletPool>().AsSingle().NonLazy();
         Container.Bind<LevelGenerator>().AsSingle().NonLazy();
         Container.Bind<SmartLevelGenerator>().AsSingle().NonLazy();
-        Container.BindFactory<Transform, Bullet, BulletPool.BulletFactory>().AsSingle().NonLazy();
-
-        Container.Bind<TestFactory>().FromInstance(testFactory).AsSingle().NonLazy();
-        Container.BindFactory<Transform, BulletNonMono, BulletNonMono.NonMonoBulletFactory>().AsSingle().NonLazy();
+        Container.BindFactory<Bullet, BulletPool.BulletFactory>().FromComponentInNewPrefab(bulletPrefab).AsSingle().NonLazy();
     }
 }

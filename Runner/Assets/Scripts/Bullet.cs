@@ -20,8 +20,7 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        rb.AddForce(new Vector3(0, 0, speed));
-        rb.MovePosition(new Vector3(_targetTransform.position.x, _targetTransform.position.y, _targetTransform.position.z * speed));
+        transform.position = Vector3.MoveTowards(transform.position, _targetTransform.position, speed * Time.deltaTime);
         if (gameObject.activeSelf || !isCoroutineStarted)
             StartCoroutine(StartLife());
     }
@@ -44,7 +43,7 @@ public class Bullet : MonoBehaviour
     }
 
     [Inject]
-    public void Construct(Transform targetTransform)
+    public void Construct([Inject(Id = MyConstants.TARGET_TRANSFORM)] Transform targetTransform)
     {
         _targetTransform = targetTransform;
     }
